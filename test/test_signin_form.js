@@ -12,6 +12,7 @@ var error_message = dataForLoginPage.errorMessages;
 describe ('Yandex mail', function(){ 
     before ('Open sign in form', 
     () => {
+        browser.deleteCookie();
         browser
             .url('http://mail.yandex.ru')
             .$('.button2_theme_mail-white').click()
